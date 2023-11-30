@@ -1,0 +1,12 @@
+/* @tailwind base;
+@tailwind component;
+@tailwind utilities; */
+
+.my-text {
+  color: wheat;
+}
+
+.box {
+  width: 500px;
+  aspect-ratio: 1;
+}

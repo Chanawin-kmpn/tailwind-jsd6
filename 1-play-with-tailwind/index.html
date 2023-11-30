@@ -1,9 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <!-- Custom 2 : Tailwind UtilityClass -->
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .my-text {
+          color: aquamarine;
+        }
+      }
+      </style>
+      <!-- Custom 4: Your CSS with TailwindClass -->
+      <!-- <style>
+        @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+  /* ... */
+}
+      </style> -->
+
+      <!-- Custom 4 : Your css -->
+      <link rel="stylesheet" href="style.css" type="text/css"></link>
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <!-- JIT : Just in time Compilation -->
+    <div class="bg-white dark:bg-state-800 box">
+      <h1 class="font-mono dark:text-sky-800 text-3xl font-thin text-primary underline">
+        Hello world
+      </h1>
+      <h1 class="font-mono text-3xl font-thin my-text underline">
+        Hello world
+      </h1>
+    </div>
+  </body>
 </html>
